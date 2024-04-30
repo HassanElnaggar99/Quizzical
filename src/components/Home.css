@@ -1,0 +1,42 @@
+.home-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  font-family: Karla;
+  font-size: 2rem; /* 31.25px */
+  font-weight: 700;
+  line-height: 1.125; /* 36px */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.home-description {
+  font-family: Inter;
+  font-size: 1rem; /* 16px */
+  /* line-height: 19.36px; */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home-btn {
+  /* width: 193px; */
+  /* height: 52px; */
+  padding: 16px 60px;
+  border-radius: 15px;
+  background: var(--clr-fill);
+
+  font-family: Inter;
+  font-size: 1rem; /* 16px */
+  font-weight: 500;
+  line-height: 1.25; /* 20px */
+  text-align: center;
+  color: var(--clr-bg);
+
+  border: none;
+  cursor: pointer;
+  margin-inline: auto;
+}
