@@ -4,7 +4,6 @@ import Question from './Question'
 
 export default function Quiz(props) {
   const [questions, setQuestions] = React.useState([])
-  // const [userAnswers, setUserAnswers] = React.useState([])
   const [isFinished, setIsFinished] = React.useState(false)
   const [score, setScore] = React.useState(0)
   const userAnswers = []
@@ -14,15 +13,17 @@ export default function Quiz(props) {
     // fetch("/data.json")
       .then(resp => resp.json())
       .then(data => setQuestions(data?.results))
-    console.log("fetched!")
   }, [])
 
   function updateUserAnswers(event, index) {
       userAnswers[index] = event.target.textContent
-      // console.log(userAnswers);
   }
 
-  const correctAnswers = questions.map(q => q.correct_answer)
+  const correctAnswers = questions.map(q => {
+    const tmp = document.createElement("p")
+    tmp.innerHTML = q.correct_answer
+    return tmp.textContent
+  })
   const questionElements = questions.map((item, i) => {
     return <Question
               key={i}
@@ -47,13 +48,13 @@ export default function Quiz(props) {
     <main className="quiz-page">
       {questionElements}
       {!isFinished &&
-        <button onClick={getResults} className="quiz-page-btn">
+        <button onClick={getResults} className="quiz-page-getAnswers">
           Check answers
         </button>}
       {isFinished &&
-        <div>
-          <span>You scored {score}/5 correct answers</span>
-          <button onClick={props.changePage}>Play again</button>
+        <div className="quiz-page-resultArea">
+          <span className="quiz-page-result">You scored {score}/5 correct answers</span>
+          <button className="quiz-page-playAgain" onClick={props.changePage}>Play again</button>
         </div>
       }
     </main>

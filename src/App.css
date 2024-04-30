@@ -6,20 +6,17 @@
 
 body {
   font-family: "Inter", sans-serif;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+
 }
 
 #root {
+  padding-inline: 20px;
   min-height: 100vh;
-  /* border-radius: 10px; */
-  /* overflow: hidden; */
   box-shadow: 1px 1px 3px 0px #9E9E9E;
 
   color: var(--clr-text);
-  background: no-repeat top right/min(35%, 300px) url("./assets/home-blobs-top.svg"),
-            no-repeat bottom left/min(26%, 220px) url("./assets/home-blobs-bot.svg");
+  background: no-repeat top right/min(calc((100vw - 550px) / 2), 300px) url("./assets/home-blobs-top.svg"),
+            no-repeat bottom left/min(calc((100vw - 550px) / 2), 220px) url("./assets/home-blobs-bot.svg");
   background-color: var(--clr-bg);
 
   display: flex;

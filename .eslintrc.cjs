@@ -17,9 +17,11 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    'no-console': 'off',
+    'no-console': 'warn',
     'react/prop-types': 'off',
     'no-unused-vars': 'warn',
-    'react/jsx-key': 'warn'
+    'react/jsx-key': 'warn',
+    'react-hooks/exhaustive-deps': 'off'
+
   },
 }

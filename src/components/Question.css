@@ -10,7 +10,14 @@
   margin-bottom: 0.875rem /* 14px */
 }
 
+input[type="radio"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
 .question-btn {
+  display: inline-block;
   min-width: 60px;
   border: 1px solid var(--clr-fill);
   border-radius: 8px;
@@ -25,7 +32,7 @@
   cursor: pointer;
 }
 
-.question-btn.selected {
+input[type="radio"]:checked + .question-btn {
   border: none;
   background-color: #D6DBF5;
 }
@@ -36,11 +43,16 @@
 
 .question-btn.right {
   border: none;
-  background-color: #94D7A2;
+  background-color: #94D7A2 !important;
+  filter: none;
 }
 
 .question-btn.wrong {
   border: none;
-  background-color: #F8BCBC;
+  background-color: #F8BCBC !important;
   filter: opacity(50%)
+}
+
+hr {
+  border: 0.8px solid #DBDEF0;
 }

@@ -2,3 +2,54 @@
   /* padding: 25px 75px; */
   max-width: 550px;
 }
+
+.quiz-page-getAnswers {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: var(--clr-fill);
+
+  font-family: Inter;
+  font-size: 0.625rem; /* 10.24px */
+  font-weight: 600;
+  line-height: 1.25; /* 20px */
+  text-align: center;
+  color: var(--clr-bg);
+
+  border: none;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+.quiz-page-resultArea {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.quiz-page-result {
+  font-family: Inter;
+  font-size: 0.75rem; /* 12.8px */
+  font-weight: 700;
+  line-height: 1.25rem; /* 15.49px */
+  text-align: center;
+  color: var(--clr-text);
+}
+
+.quiz-page-playAgain {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: var(--clr-fill);
+
+  font-family: Inter;
+  font-size: 0.625rem; /* 10.24px */
+  font-weight: 600;
+  line-height: 1.25; /* 20px */
+  text-align: center;
+  color: var(--clr-bg);
+
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+  /* display: block; */
+}
